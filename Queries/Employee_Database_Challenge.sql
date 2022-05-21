@@ -18,7 +18,6 @@ SELECT * FROM retiring_employees_titles;
 	-- Use Dictinct with Orderby to remove duplicate rows
 
 
-	
 SELECT DISTINCT ON (ret.emp_no) ret.emp_no,
 	ret.first_name,
 	ret.last_name,
@@ -40,3 +39,21 @@ SELECT count(ut.title),ut.title
     ORDER by COUNT(ut.title) DESC;
 
 SELECT * FROM retiring_titles
+
+
+SELECT DISTINCT ON (emp.emp_no) emp.emp_no, 
+	emp.first_name, 
+	emp.last_name, 
+	emp.birth_date, 
+	dep.from_date, 
+	dep.to_date, 
+	ti.title
+INTO mentorship_eligibilty 
+FROM employees AS emp
+LEFT JOIN dept_emp AS dep
+ON emp.emp_no = dep.emp_no
+LEFT JOIN titles AS ti
+ON emp.emp_no = ti.emp_no
+WHERE (emp.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+AND (dep.to_date = '9999-01-01')
+ORDER BY emp.emp_no ASC;

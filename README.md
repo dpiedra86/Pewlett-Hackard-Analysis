@@ -9,7 +9,7 @@ It all start making sense once the challenge is finished, Pyhon, Pandas and SQL 
 
 ### Results
 
--At first glance we know we have 133,776 employees that may retire.
+- At first glance we know we have 133,776 employees that may retire.
 
 ![retiring_employees_by_title](https://github.com/dpiedra86/Pewlett-Hackard-Analysis/blob/main/Img/retiring_employees_by_title.png)
 
@@ -27,7 +27,7 @@ Retiring_titles
 
 ![mentorship](https://github.com/dpiedra86/Pewlett-Hackard-Analysis/blob/main/Img/mentorship.png)
 
-Mentorship
+Mentorship Programs
 
 Conclusion:
 - It's important to rethink if all the positions should remain the same, as this generation used to work with different tools and methdologies, it may be wise to reconsider the functions on the new roles. 
